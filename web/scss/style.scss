@@ -1,0 +1,148 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
+*/
+/*
+    Created on : 4 de nov. de 2025, 16:18:43
+    Author     : DanielMarcos
+*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+$linearGradient:linear-gradient(#868CFF,#4318FF);
+$buttonPrimary:#4318FF;
+$textPrimary:#2B3674;
+$textSecondary:#A3AED0;
+$textTertiary:#6F727A;
+
+$colorPrimary:#fff;
+$colorSecondary:#F4F7FE;
+
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: bold;
+}
+
+
+.container{
+    display: flex;
+    .section{
+        display: inherit;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .section:nth-child(1){
+        flex: 1;
+        .form{
+            .header{
+                display:flex;
+                flex-direction: column;
+                justify-content: space-around;
+                border-bottom: solid 1px #E0E5F2;
+                .title{
+                    color: $textPrimary;
+                    font-size:36px;
+                }
+                .text{
+                    color:$textSecondary;
+                    font-size:16px;
+                }
+
+
+                height: 80px
+            }
+            .formSection{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                .select{
+                    option{
+                        color:$textTertiary;
+                    }
+                    border: solid 1px #E0E2E7;
+                    border-radius: 10px;
+
+                    font-weight: 700px;
+                    padding: 1em 8px;
+                    width: 100%;
+
+                }
+                .input{
+                    display: flex;
+                    flex-direction: column;
+                    label{
+                        color: $textPrimary;
+                        font-weight: 600;
+                    }
+                    input{
+                        border: solid 1px #E0E2E7;
+                        border-radius: 10px;
+                        padding: 1em 8px;
+                    }
+                }
+                .button{
+                    background: $buttonPrimary;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    color:$colorPrimary;
+                    font-size: 20px;
+                    border:none;
+                    padding: 1em 0;
+                }
+                padding: 1em 0;
+                width: 100%;
+            }
+
+            width: 410px;
+            height: 569px;
+        }
+    }
+    .section:nth-child(2){
+        background:$linearGradient;
+        flex-direction: column;
+        text-align: center;
+        .title{
+            color:$textSecondary;
+            font-size: 40px
+        }
+        color:#B3B7FA;
+        flex:1.1;
+    }
+    height: 100vh;
+    width: 100vw
+}
+
+
+.dashboard{
+    display:flex;
+    background: $colorSecondary;
+    .sidebar{
+        background:$colorPrimary;   
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            padding: 2em 0;
+            border-bottom:solid 5px $colorSecondary; 
+            .logo{
+                width: 65px
+            }
+            .title{
+                font-size: 26;
+            }
+            width: 240px;   
+        }
+    }
+    .container{
+
+    }
+
+    height: 100vh;
+}

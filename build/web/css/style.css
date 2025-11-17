@@ -1,0 +1,140 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/style.scss to edit this template
+*/
+/*
+    Created on : 4 de nov. de 2025, 16:18:43
+    Author     : DanielMarcos
+*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+.container .section {
+  display: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.container .section:nth-child(1) {
+  flex: 1;
+}
+.container .section:nth-child(1) .form .header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-bottom: solid 1px #E0E5F2;
+}
+.container .section:nth-child(1) .form .header .title {
+  color: #2B3674;
+  font-size: 36px;
+}
+.container .section:nth-child(1) .form .header .text {
+  color: #A3AED0;
+  font-size: 16px;
+}
+.container .section:nth-child(1) .form .header {
+  height: 80px;
+}
+.container .section:nth-child(1) .form .formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.container .section:nth-child(1) .form .formSection .select option {
+  color: #6F727A;
+}
+.container .section:nth-child(1) .form .formSection .select {
+  border: solid 1px #E0E2E7;
+  border-radius: 10px;
+  font-weight: 700px;
+  padding: 1em 8px;
+  width: 100%;
+}
+.container .section:nth-child(1) .form .formSection .input {
+  display: flex;
+  flex-direction: column;
+}
+.container .section:nth-child(1) .form .formSection .input label {
+  color: #2B3674;
+  font-weight: 600;
+}
+.container .section:nth-child(1) .form .formSection .input input {
+  border: solid 1px #E0E2E7;
+  border-radius: 10px;
+  padding: 1em 8px;
+}
+.container .section:nth-child(1) .form .formSection .button {
+  background: #4318FF;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  border: none;
+  padding: 1em 0;
+}
+.container .section:nth-child(1) .form .formSection {
+  padding: 1em 0;
+  width: 100%;
+}
+.container .section:nth-child(1) .form {
+  width: 410px;
+  height: 569px;
+}
+.container .section:nth-child(2) {
+  background: linear-gradient(#868CFF, #4318FF);
+  flex-direction: column;
+  text-align: center;
+}
+.container .section:nth-child(2) .title {
+  color: #A3AED0;
+  font-size: 40px;
+}
+.container .section:nth-child(2) {
+  color: #B3B7FA;
+  flex: 1.1;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.dashboard {
+  display: flex;
+  background: #F4F7FE;
+}
+.dashboard .sidebar {
+  background: #fff;
+}
+.dashboard .sidebar .header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 2em 0;
+  border-bottom: solid 5px #F4F7FE;
+}
+.dashboard .sidebar .header .logo {
+  width: 65px;
+}
+.dashboard .sidebar .header .title {
+  font-size: 26;
+}
+.dashboard .sidebar .header {
+  width: 240px;
+}
+.dashboard {
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */
