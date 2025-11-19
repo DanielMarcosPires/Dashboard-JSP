@@ -22,7 +22,7 @@
             </aside>
             <div class="container">
                 <header>
-                    <pre><%=request.getRequestURI()%></pre>
+                    <pre><%=request.getRequestURL()%></pre>
                     <h2>Main Dashboard</h2>
                     <p>Welcome ${user.name}</p>
                 </header>

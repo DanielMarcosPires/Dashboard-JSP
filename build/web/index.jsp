@@ -3,7 +3,6 @@
     Created on : 30 de out. de 2025, 20:25:26
     Author     : DanielMarcos
 --%>
-<%@page import="model.Login" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -42,7 +41,11 @@
                             <input required type="checkbox" name="logged" value="ON" />
                             Keep me logged in
                         </label>
-                      
+
+                        <% if (request.getAttribute("loginError") != null) {%>
+                        <p style="color:red;"><%= request.getAttribute("loginError")%></p>
+                        <% }%>
+
                         <button type="submit" class="button">Login</button>
                     </section>
                 </form>

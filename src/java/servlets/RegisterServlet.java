@@ -13,7 +13,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import model.Login;
 
 /**
  *
@@ -23,29 +22,22 @@ import model.Login;
 public class RegisterServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("**************RegisterServlet****************");
+        
         String termsUse = request.getParameter("acceptTerms");
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        System.out.println("Entrada de dados: \n" + request);
-        System.out.println("************Login Registrado no Banco!***************");
-
         if (termsUse.contains("ON")) {
-            Login login = new Login(name, email, password);
-            DBConnection dbCon = new DBConnection(
-                    "jdbc:postgresql://localhost:5432/UsersRegister",
-                    "postgres",
-                    "1234"
-            );
-
+            DBConnection dbCon = new DBConnection();
             try {
-                dbCon.getData();
+                dbCon.setData(name, email, password);
+                request.getRequestDispatcher("index.jsp").forward(request, response);
             } catch (SQLException ex) {
-                System.getLogger(RegisterServlet.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
-            } catch (ClassNotFoundException ex) {
                 System.getLogger(RegisterServlet.class.getName()).log(System.Logger.Level.ERROR, (String) null, ex);
             }
         }
+        System.out.println("******************************");
     }
 }
